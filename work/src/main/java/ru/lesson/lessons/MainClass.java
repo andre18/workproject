@@ -25,10 +25,6 @@ public class MainClass {
     private static int row;
     private static int column;
 
-//    private int maxK = 1;
-//    private int maxF = 1;
-
-
     public static void main (String[] args) {
         MainClass mc = new MainClass();
 
@@ -69,6 +65,7 @@ public class MainClass {
         System.out.println();
     }
 
+    //method for checking input, if zero and one, returns true
     private boolean reg(String s) {
 
         Pattern p =Pattern.compile("[0-1]+");
@@ -77,6 +74,7 @@ public class MainClass {
         return m.matches();
     }
 
+    //method, that parses the input strings into a two-dimensional array of characters
     private char[][] parseToDigitArray (ArrayList<String> arrayList) {
         row = arrayList.size();
         column = arrayList.get(0).length();
@@ -90,6 +88,7 @@ public class MainClass {
         return myfield;
     }
 
+    //method, that find the biggest perimeter of rectangle in two-dimensional array
     public int findSubRectangle(char input[][]){
         Cell T[][] = new Cell[input.length][input[0].length];
         for(int i=0; i < T.length; i++){
